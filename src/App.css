@@ -1,33 +1,21 @@
-.App {
-  text-align: center;
+.background {
+    width:100%;
+    background-color: #2e2e36;
+    min-height: 100vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.header-image {
+    width:100%;
+    height: 300px;
+    background: url('./assets/godfather-header.jpg') center -150px no-repeat;
+    background-size: cover;
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-image__overlay {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(46,46,54,0) 30%);
 }
