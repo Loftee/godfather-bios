@@ -21,6 +21,12 @@ exports[`Menu Component renders correctly 1`] = `
       <a
         className="header__menu-link"
         href="#Vito Corleone"
+        onClick={[Function]}
+        style={
+          Object {
+            "fontSize": 35,
+          }
+        }
       >
         Vito Corleone
       </a>

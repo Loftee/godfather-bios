@@ -9,7 +9,11 @@ describe('App', () => {
         expect(app).toMatchSnapshot();
     });
 
-    it('has a menu', () => {
+    it('has a menu component', () => {
         expect(app.find('Menu').exists()).toBe(true);
+    });
+
+    it('has a SelectedEmployee component', () => {
+        expect(app.find('SelectedEmployee').exists()).toBe(true);
     });
 });

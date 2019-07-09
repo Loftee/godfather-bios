@@ -1,7 +1,9 @@
 .header {
     background-color: rgba(0, 0, 0, 0.3);
     min-height: 100vh;
-    max-width: 380px;
+    float: left;
+    width: 25%;
+    padding-bottom: 30px;
 }
 
 .header__logo {
@@ -44,4 +46,24 @@
 
 .header__menu-link:hover {
     background: #25252d;
+}
+
+@media (min-width:768px) {
+    .header {
+        max-width: 380px;
+        align-items: stretch;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .header {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        width: 100%;
+        min-height: initial;
+    }
 }

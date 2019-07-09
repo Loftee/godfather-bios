@@ -1,13 +1,34 @@
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-size: 42px;
+    line-height: 52px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 26px;
+    line-height: 32px;
+}
+
+.app {
+    display: flex;
+}
+
 .background {
-    width:100%;
-    background-color: #2e2e36;
-    min-height: 100vh;
+    width: 100%;
 }
 
 .header-image {
-    width:100%;
+    width: 100%;
     height: 300px;
-    background: url('./assets/godfather-header.jpg') center -150px no-repeat;
+    background: url('assets/images/godfather-header.jpg') center -150px no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -16,6 +37,19 @@
     position: absolute;
     width: 100%;
     height: 300px;
-    background: rgb(2,0,36);
-    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(46,46,54,0) 30%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 1) 0%, rgba(46, 46, 54, 0) 30%);
+}
+
+.content-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+}
+
+.content-container:after,
+.background:after {
+    content: "";
+    display: table;
+    clear: both;
 }

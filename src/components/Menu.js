@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import Logo from '../assets/the-godfather.svg';
+import Logo from '../assets/images/the-godfather.svg';
 
 import './Menu.css';
 
 class Menu extends Component {
     render() {
-        const {employees} = this.props;
+        const {employees, selectEmployee} = this.props;
         return (
             <div className={'header'}>
                 <div className={'header__logo'}>
@@ -16,7 +16,14 @@ class Menu extends Component {
                         employees.map((employee, index) => {
                                 return (
                                     <li key={index}>
-                                        <a className={'header__menu-link'} href={'#'+ employee.name}>{employee.name}</a>
+                                        <a
+                                            style={{
+                                                fontSize: (employee.popularity * 0.5) * 14
+                                            }}
+                                            className={employee.selected ? 'header__menu-link header__menu-link--active' : 'header__menu-link'}
+                                            href={'#'+ employee.name}
+                                            onClick={event => selectEmployee(event, employee.name)}
+                                        >{employee.name}</a>
                                     </li>
                                 )
                             }
