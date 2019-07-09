@@ -12,5 +12,19 @@ exports[`Menu Component renders correctly 1`] = `
       src="the-godfather.svg"
     />
   </div>
+  <ul
+    className="header__menu"
+  >
+    <li
+      key="0"
+    >
+      <a
+        className="header__menu-link"
+        href="#Vito Corleone"
+      >
+        Vito Corleone
+      </a>
+    </li>
+  </ul>
 </div>
 `;
